@@ -1,0 +1,369 @@
+.footer {
+    margin-top: auto;
+    bottom: 0;
+    
+  }
+
+.subscride_info {
+    height: 448px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F4F4F4;
+    background-image: url(img/photo_subscribe.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: bottom;
+    background-attachment: fixed;
+}
+
+.creator {
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.creator_text {
+    color: $colorCommonDarkItems;
+    text-align: center;
+    font-family: "Poiret One", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    height: 99px;
+}
+
+.subscribe_container {
+    max-width: 557px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subscribe_text {
+    margin-bottom: 32px;
+}
+
+.subscribe_title {
+    color: $colorCommonDarkItems;
+    text-align: center;
+    font-family: "Poiret One", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 167.2%;
+}
+
+.subscribe_subtitle {
+    color: $colorCommonDarkItems;
+    font-family: "Poiret One", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 167.2%;
+}
+
+.subscribe_form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subscribe_form_input {
+    width: calc(100% - 100px);
+    color: $colorCommonDarkItems;
+    background-color: #E1E1E1;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.671;
+    padding: 1rem;
+    border: none;
+    border-top-left-radius: 49px;
+    border-bottom-left-radius: 49px;
+}
+
+.subscribe_form_button {
+    max-width: 100px;
+    background-color: $colorHighlightedItems;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 1rem;
+    border: none;
+    border-top-right-radius: 49px;
+    border-bottom-right-radius: 49px;
+    transition: 0.5s
+}
+
+.subscribe_form_button:hover {
+    background-color: $colorCommonDarkItems;
+}
+
+.contacts {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: $colorCommonDarkItems;
+}
+
+.copyright_text {
+    color: #000;
+    font-family: "Poiret One", sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.social_nets_bar {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+.social_net_item {
+    background-color: #FFFFFF;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.social_net_item:hover {
+    background-color: $colorHighlightedItems;
+}
+
+.social_net_item:hover .social_net_link path {
+    fill: white;
+}
+
+
+$highlight: #d6b02b;
+$darkhighlight: #d6b02b;
+
+body {
+	
+	display: flex;
+	flex-flow: wrap;
+	font-family: "Ubuntu", sans-serif;
+	
+	* {
+		box-sizing: border-box;
+	}
+}
+
+.card-container {
+	flex: 300px;
+	margin: 30px;
+	
+	.card {
+		font-weight: bold;
+		position: relative;
+		width: 100%;
+       
+		
+		a {
+			padding: 30px;
+			width: 100%;
+			height: 400px;
+			border: 2px solid black;
+			background: transparent;
+			text-decoration: none;
+			color: black;
+			display: block;
+			transition: 0.25s ease;
+            background-color: #ffffff94;
+			
+			&:hover {
+				transform: translate(-30px, -30px);
+				border-color: $highlight;
+                background-color: #ffffff94;
+				
+				.card--display {
+					display: none;
+				}
+				
+				.card--hover {
+					display: block;
+                    background-color: #ffffff94;
+                    background-color: transparent;
+				}
+			}
+            .card-span{
+                font-size: 16px;
+            }
+			
+			.card--display {
+				i {
+					font-size: 42px;
+					margin-top: 200px;
+				}
+				
+				h2 {
+					margin: 32px 0 0;
+				}
+			}
+			
+			.card--hover {
+				display: none;
+                background-color: #ffffff94;
+                font-weight: 900;
+                
+				
+				h2 {
+					margin: 18px 0;
+                
+
+				}
+				
+				p {
+					font-weight: normal;
+					line-height: 1.5;
+                    font-weight: 900;
+                    font-size: 20px;
+                    background-color: transparent;
+					
+					&.link {
+						margin: 20px 0 0;
+						font-weight: bold;
+						color: $highlight;
+					}
+				}
+			}
+		}
+		
+		.card--border {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			border: 2px dashed black;
+			z-index: -1;
+		}
+		
+		&.card--dark {
+			a {
+				color: transparent;
+				background-color: black;
+				border-color: black;
+				
+				.card--hover {
+					.link {
+						color: $darkhighlight;
+
+					}
+				}
+			}
+		}
+	}
+}
+.contact-text_link{
+    color: #000;
+    font-size: 22px;
+    font-weight: 900;
+
+}
+
+.footer_text{
+    color: #000;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+   
+    .contact-text_link, .copyright_text, .social_nets_bar {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .subscride_info {
+        flex-direction: column;
+        height: 600px;
+        gap: 48px;
+        padding-top: 64px;
+        justify-content: normal;
+        background-position-x: left;
+        background-position-y: bottom;
+    }
+
+
+    .social_nets_bar {
+        margin-right: 16px;
+    }
+    .card-container .card a .card--hover p {
+        line-height: 1;
+    font-weight: 600;
+    font-size: 16px;
+    }
+    .card-container .card a .card--hover{
+        display: flex;
+    }
+    .card-container {
+        flex: 100 1;
+        margin: 1px;
+    
+    }
+    .card-container .card a .card--display i{
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    .card-container .card a{
+        height: 100%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767.98px) {
+
+    .subscride_info {
+        flex-direction: column;
+        height: 550px;
+        gap: 59px;
+        padding-top: 64px;
+        justify-content: normal;
+        background-position-x: left;
+        background-position-y: bottom;
+    }
+
+    .creator_text {
+        font-size: 18px;
+        height: auto;
+    }
+
+    .subscribe_text {
+        margin-bottom: 22px;
+    }
+
+    .subscribe_title {
+        line-height: 153.2%;
+    }
+
+    .subscribe_subtitle {
+        font-size: 14px;
+        line-height: 153.2%;
+    }
+
+    .contacts {
+        padding: 9px;
+        height: 143px;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: normal;
+    }
+
+    .social_nets_bar {
+        margin-bottom: 40px;
+    }
+
+}

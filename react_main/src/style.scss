@@ -1,0 +1,112 @@
+@import 'vars';
+@import 'mixins';
+@import 'header';
+@import 'mainPage';
+@import 'footer';
+@import 'product';
+@import 'catalog';
+@import 'cart';
+@import 'registration';
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+summary {
+    display: block;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+body {
+    font-family: $fontFamilyText;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.box-content {
+    overflow: hidden;
+    
+}
+
+.content {
+    flex: 1;
+   
+    
+}
+
+.center {
+    padding-left: calc(50% - $widthDesktopSite / 2);
+    padding-right: calc(50% - $widthDesktopSite / 2);
+    
+}
+
+.contact-text{
+    font-family: $fontFamilyText;
+}
+
+
+.box-text{
+    padding: 25px;
+font-size: 32px;
+font-weight: 800;
+    
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .box-text {
+        padding: 10px;
+        font-size: 25px;}
+}
+
+@media (min-width: 320px) and (max-width: 767.98px) {
+    .box-text {
+        padding: 5px;
+        font-size: 16px;}
+    .footer{
+        background-color: black;
+    }
+    .center {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .subscride_info {
+        display: none;
+    }
+    .feature_title{
+        font-size: 20px;
+    }
+    .subscride_info {
+        font-size: 14px;
+    }
+    .social_nets_bar{
+        margin-bottom: 20px;
+        color: aliceblue;
+    }
+    .contact-text_link {
+        color: aliceblue;
+
+        font-weight: 600;
+        padding-bottom: 10px;
+}
+.copyright_text {
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: 600;
+}}
